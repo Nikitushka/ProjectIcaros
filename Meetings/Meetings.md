@@ -107,3 +107,32 @@ teron avainsana karttaa varten: interpolointi
 offline - openstreetmap-kansalaisen karttapaikka
 
 http://terokarvinen.com/2012/getting-started-with-openlayers-and-openstreetmap/
+
+## TAPAAMINEN 10.02.2021
+
+Tapaamisessa käytyjä asioita:
+
+  * Raportointi kaikesta: ongelmatilanteet, niiden ratkaisu, asioiden selvitykset
+  * Raportoinnin julkaisu: WordPress, GitHub. 
+
+
+Seuraavie työvaiheita viikolle 6:
+
+  * Wordpressiin artikkeli (kuvia, aiempien ongelmatilanteiden kuvaus jne.) Tommi otti vastuun
+  * GitHubin pystyttäminen ja sinne tavaran puskeminen. Aki otti selvitettäväkseen Gitin pystyttämisen
+  * Karttasovellusten, sekä rajapintojen selvitys ja kokeilu. Elmo kokeilee settejä virtuaalikoneilla ja läppärillä.
+  * Trellon mahdollinen pystytys työnjakoa ja seurantaa varten.
+
+Kukin työstää itse tai muiden kanssa ja kirjoittelee muistiinpanoja/raportteja tapahtumista.
+
+## Komentoja
+
+smart
+sudo smartctl -a /dev/sda
+$ nmcli dev wifi
+
+## KARTTOIHIN LIITTYVÄÄ
+
+https://asiointi.maanmittauslaitos.fi/karttapaikka/ (offline)
+openstreetmap (online)
+http://terokarvinen.com/2012/getting-started-with-openlayers-and-openstreetmap/

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+
+<body>
+	<p>Kartan testausta</p>
+	<div id="map" style="top: 0; left: 0; bottom: 0; right: 0; position: fixed">
+	</div>
+
+	<script src="http://www.openlayers.org/api/OpenLayers.js">
+	</script>
+	<script>
+		map = new OpenLayers.Map("map");
+		map.addLayer(new OpenLayers.Layer.OSM());
+
+		var lonLat = new OpenLayers.LonLat(24.9342, 60.2017)
+			.transfrom(
+				new OpenLayers.Projection("EPSG:4326"),
+				map.getProjectionObject()
+			);
+	</script>
+</body>

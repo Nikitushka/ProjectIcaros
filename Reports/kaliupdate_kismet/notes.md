@@ -1,3 +1,9 @@
+// OLD FINNISH WRITE-UP
+// SEE README.MD IN THIS FOLDER
+// FOR CURRENT, ENGLISH ONE
+//
+//
+
 # Raspberryn Kalin päivitystä, Kismetin kokeilua
 
 Ajatuksena tässä oli lähteä kokeilemaan Kalin yleistä toimintaa Raspberry Pi:llä, sekä alustavasti kokeilla **Kismetiä** WiFi signaalien kartoitukseen. En ollut aikaisemmin tutustunut **Kismetiin** muuten kuin kuullut sen nimen mainittavan puhuttaessa WiFi-verkoista.

@@ -28,4 +28,4 @@ I copied the code under section 6. I refreshed the page and a round marker appea
 
 ![map004.png](./map004.png)
 
-The marker is quite faint, but in the future this would be updated. You can try the map out for youself! Just click [here.](./index2.html)
+The marker is quite faint, but in the future this would be updated. You can try the map out for youself! Just download the index2.html [here.](./index2.html)

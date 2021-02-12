@@ -1,7 +1,7 @@
 # Introduction
 This document serves as an index of different types of competitors we have in terms of mapping radiotransmitters and signals.
 
-The criteria for being selected as a "competitor" are google queries containing "sdr map", "radio transmitter map" and "wireless signal map".
+The criteria for being selected as a "competitor" are google queries containing "sdr map", "radio transmitter map" and "wireless signal map" and our team deeming the projects being closest to our end result.
 
 Specific keywords will be **boldened** and explained at the bottom, in the glossary. 
 
@@ -46,6 +46,12 @@ Once an SDR has been selected, a user can use this receiver to tune in to differ
 ![SDR](https://github.com/Nikitushka/ProjectIcaros/blob/drafts/Reports/competitor_mapping/images/KiwiSDR_2.jpg)
 
 So technically, while KiwiSDR has the SDR map capability, it is only reserved for KiwiSDR's that are open to establish a connection to.
+
+# Conclusion
+
+While these competitors provide different maps for different types of wireless telecommunication, they utilize radio towers or other available static technology.
+
+Our project aims to instead map signal transmitters live, using Raspberry PI, RTL-SDR and presence on premises/in the range of the wireless signals.
 
 # Glossary
 

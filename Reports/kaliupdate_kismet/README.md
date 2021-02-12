@@ -2,7 +2,7 @@
 
 The idea was to try out Kali on the Raspberry Pi, and to get familiar with WiFi signal mapping using **Kismet**. I hadn't previously touched **Kismet**, only heard it mentioned by name when it came to WiFi-networks.
 
-One of our project's functionalities would be some to heatmap WiFi signal so I started googling with "linux wifi mapping", "wifi mapping", "heatmap wifi" etc. I found a relevant discussion on the subject and started digging. [Discussion in question.](https://mangolassi.it/topic/17139/wifi-heatmapping-on-linux/7)
+One of our project's functionalities would be to heatmap WiFi signals so I started googling with "linux wifi mapping", "wifi mapping", "heatmap wifi" etc. I found a relevant discussion on the subject and started digging. [Discussion in question.](https://mangolassi.it/topic/17139/wifi-heatmapping-on-linux/7)
 
 In the discussion was [a link to a list](https://alternativeto.net/software/inssider/?platform=linux#) containing alternative applications for something called **inSSIDer**. I hadn't heard of **inSSIDer** before, but I noticed that something called **Kismet** had the following info written: _"Kismet is an 802.11 layer2 wireless network detector, sniffer, and intrusion detection system."_
 
@@ -10,7 +10,7 @@ I decided to install said software to my laptop running Linux Ubuntu.
 
     $ sudo apt update && sudo apt install -y kismet
 
-According to [Cyber Weapons Lab's](https://null-byte.wonderhowto.com/how-to/use-kismet-watch-wi-fi-user-activity-through-walls-0182214/) instructions on using the software I'd need a **NIC** with the ability to put it in promiscuous mode. You could achieve it with the use of **airmon-nf/aircrack-ng**. The program can be found from **apt**. I installed said program
+According to [Cyber Weapons Lab's](https://null-byte.wonderhowto.com/how-to/use-kismet-watch-wi-fi-user-activity-through-walls-0182214/) instructions on using the software I'd need a **NIC** with the ability to put it in promiscuous mode. You could achieve it with the use of **airmon-nf/aircrack-ng**. The program can be found from **apt**. I installed said program.
 
     $ sudo apt-cache search aircrack
     $ sudo apt install -y aircrack-ng

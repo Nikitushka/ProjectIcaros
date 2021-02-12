@@ -1,5 +1,5 @@
 # Note:
-These meeting notes are all done in finnish.
+These meeting notes are all done in a mix of english and finnish and do not necessarily serve as official documentation.
 
 ## 25.1.2021
 

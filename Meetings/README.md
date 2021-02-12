@@ -125,13 +125,13 @@ Seuraavie työvaiheita viikolle 6:
 
 Kukin työstää itse tai muiden kanssa ja kirjoittelee muistiinpanoja/raportteja tapahtumista.
 
-## Komentoja
+### Komentoja
 
 smart
 sudo smartctl -a /dev/sda
 $ nmcli dev wifi
 
-## KARTTOIHIN LIITTYVÄÄ
+### KARTTOIHIN LIITTYVÄÄ
 
 https://asiointi.maanmittauslaitos.fi/karttapaikka/ (offline)
 openstreetmap (online)

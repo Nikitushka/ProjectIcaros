@@ -19,7 +19,7 @@ _The Network Maps section makes it easy to find frequencies of a specific statio
 #### _FMLIST - the world-wide frequency database_
 _Part of the data come from public sources. In addition to that FMLIST includes many observations from people who like to listen to distant stations (DXers). These hobbyists are also the most intense users of the database. Combining all this information makes FMLIST unique. In Southern Europe for example you won't gain much from the official sources. FMLIST has become very comprehensive over the years. Günter Lorenz started the FMLIST project in Germany in the late 80ies. FMSCAN and FMMAP have been on the internet since 2000._
 
-The map feature only shows radio towers, but clicking on said towers in the map can display which radio stations and frequencies are broadcasted from them.
+The map feature only shows radio towers, but clicking on said towers on the map can display which radio stations and frequencies are broadcasted from them.
 
 ![fmscan map](https://github.com/Nikitushka/ProjectIcaros/blob/drafts/Reports/competitor_mapping/images/fms_1.jpg)
 

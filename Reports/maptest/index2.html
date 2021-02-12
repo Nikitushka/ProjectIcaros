@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <title>OpenLayers example</title>
+	<meta charshet="utf-8"/>
+  </head>
+  <body>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([24.9342, 60.2017]),
+          zoom: 18
+        })
+      });
+
+	  // Creates new layer, with a marker feature
+	  var layer = new ol.layer.Vector ({
+		source: new ol.source.Vector({
+			features: [
+				new ol.Feature({
+					geometry: new ol.geom.Point(ol.proj.fromLonLat([24.9342, 60.2017]))
+				})
+			]
+		})
+	  });
+	  // Add the above created layer to the map
+	  map.addLayer(layer);
+    </script>
+  </body>
+</html>

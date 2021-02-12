@@ -1,3 +1,15 @@
+// OLD WRITE-UP IN FINNISH!
+// SEE [README.MD](./README.md) FOR
+// THE CURRENT, ENGLISH ONE
+//
+//
+//
+//
+
+
+
+
+
 # Kartan testausta internet-selaimella
 
 Tulisimme tarvitsemaan projektissamme karttaa, joten päätin lähteä selvittämään kuinka helposti saisi esimerkiksi perus-HTML-sivulle näytettyä kartan.

@@ -1,5 +1,7 @@
 # Raspberry's Kali updates, figuring out Kismet
 
+_After writing this I noticed that I was trying to use **aircrack** to setup my WiFi card as a monitoring one, instead of **airmon**. A report in which I do it correctly can be found [here](../kismet-airmon/README.md)._
+
 The idea was to try out Kali on the Raspberry Pi, and to get familiar with WiFi signal mapping using **Kismet**. I hadn't previously touched **Kismet**, only heard it mentioned by name when it came to WiFi-networks.
 
 One of our project's functionalities would be to heatmap WiFi signals so I started googling with "linux wifi mapping", "wifi mapping", "heatmap wifi" etc. I found a relevant discussion on the subject and started digging. [Discussion in question.](https://mangolassi.it/topic/17139/wifi-heatmapping-on-linux/7)

@@ -60,7 +60,7 @@ Going through the tutorial and my command history, I noticed I hadn't re-enabled
     $ sudo ip link set wlp3s0mon up
     $ sudo kismet -c wl3ps0mon
 
-No luck, I got the identical error message. After double and triple checking everything - card i monitoring mode, brought back up, no interfering processes - I decided to look for a tutorial. I found a simple-ish tutorial from [Cyber Weapons Lab](linkki) and saw they used the
+No luck, I got the identical error message. After double and triple checking everything - card i monitoring mode, brought back up, no interfering processes - I decided to look for a tutorial. I found a simple-ish tutorial from [Cyber Weapons Lab](https://null-byte.wonderhowto.com/how-to/use-kismet-watch-wi-fi-user-activity-through-walls-0182214/) and saw they used the
 
     $ kismet -c YourCardName
 

@@ -123,6 +123,12 @@ Seuraavie työvaiheita viikolle 6:
 
 Kukin työstää itse tai muiden kanssa ja kirjoittelee muistiinpanoja/raportteja tapahtumista.
 
+## TAPAAMINEN 15.2.2021
+
+* Aki on samalla, kun hän on tutkinut SDR:n ja Web SDR:n toimintaa törmännyt keskusteluun siitä, miten voisimme saada signaalien lähtösijainnin selvitettyä. Kävi ilmi, että tuo signaalin paikantaminen on melkein mahdotonta (lähde: https://www.reddit.com/r/RTLSDR/comments/4c18ct/distance/)
+* Kirjasimme ylös lyhyet esittelyt itsestämme ensimmäistä viikkotapaamisen raporttia varten.
+* Päätettiin, että keskiviikon tapaamista varten tutkimme lisää tuosta signaalin paikannettavuudesta ja tutkimme myös vaihtoehtoista projektin pääpiirrettä, joka olisi WiFi kartoitus.
+
 ### Komentoja
 
 smart

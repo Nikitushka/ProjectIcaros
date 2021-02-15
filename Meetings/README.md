@@ -134,3 +134,13 @@ $ nmcli dev wifi
 https://asiointi.maanmittauslaitos.fi/karttapaikka/ (offline)
 openstreetmap (online)
 http://terokarvinen.com/2012/getting-started-with-openlayers-and-openstreetmap/
+
+## TAPAAMINEN 12.02.2021
+
+Tapaamisessä käytyjä asioita:
+
+* Kävimme läpi Elmon luomat raportit OpenStreetMapista ja Kismetistä.
+* Päivitimme Trelloon uudet kortit uusille osille projektia ja kommentoimme/hyväksyimme olemassa olevien korttien etenemisen.
+* Siirsimme drafts-branchin sisällön mainiin.
+* Otimme yhteyttä DNA asiakaspalveluun ja saimmi sähköpostiosoitteen josta voimme saada lisätietoa mahdollisista laillisista rajoista liittyen signaaleihin ja puhelinmastoihin.
+* Sovimme, että pidämme viikkotapaamisen maanantaina kello 14.

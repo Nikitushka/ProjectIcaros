@@ -46,4 +46,32 @@ I opened **Firefox** and headed to said address. At this point the **Raspberry P
 
 After trying out everything for 40 minutes I decided to pull the plug (literally). I suspect the **Raspberry Pi's** limited RAM of 1Gb was the cause of the extreme slowdown. I would have to figure out how to run **kismet** with the terminal UI.
 
+_After doing some research, I found that **kismet** doesn't really use THAT much ram. The chugging maybe a combination of the GUI of the **Kali**, the web-browser AND **kismet** combined bring the Pi to a halt. According to 2020-12-R3 release page of **kismet**, the program eats about 400Mb of RAM on the **Raspberry Pi 4**. [Source.](https://www.kismetwireless.net/release/kismet-2020-12-R1/)_
+
 On my laptop **kismet** automatically used the terminal UI. Then again, I installed it through **apt** on my laptop whereas on the **Raspberry Pi** it came pre-installed with the **Linux Kali.**
+
+After trying the same things again a couple of times on the **Raspberry Pi** with no major difference to the results (as in, the **Pi** came to a crawl everytime), I looked into trying to running **kismet** in the terminal.
+
+The **man** pages of **kismet** provided no commands for such thing, so I looked up the [program's documentation](https://www.kismetwireless.net/docs/readme_group.html). No commands for GUI-less mode were specified. Apparently the new versions come with the web UI and cannot be run without it. I'd have to get myself an older version of **kismet** to run on the **Pi**.
+
+I checked the versions of **kismet** on my laptop and on the **Pi**.
+
+	$ kismet -v
+
+![kismet003](./imgs/kismet003.png)
+
+_Kismet's version on my laptop_
+
+![kismet004](./imgs/kismet004.png)
+
+_Kismet's version on the Pi_
+
+So the older version on my laptop does indeed run the GUI-less interface by default.
+
+The next thing to figure out was installing an older version on **kismet** on the **Pi**.
+
+## References
+
+1. [Kismet's documentation](https://www.kismetwireless.net/docs/readme_group.html)
+
+2. [Kismet 2020-12-R3 release information](https://www.kismetwireless.net/release/kismet-2020-12-R1/)

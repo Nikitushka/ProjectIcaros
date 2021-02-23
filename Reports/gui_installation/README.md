@@ -69,7 +69,7 @@ I installed **xinit** and **awesome**, then copied the skeleton of the **xinitrc
     $ sudo apt install -y awesome
     $ cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
-![xinitrc001](./imgs/xinitrc001.ong)
+![xinitrc001](./imgs/xinitrc001.png)
 
 _The only addition to the file is the **awesome** at the bottom, which will start the window manager._
 

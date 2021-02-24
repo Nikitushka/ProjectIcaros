@@ -97,7 +97,11 @@ I didn't have a terminal emulator on it, so I quit the **awesome** and installed
 
 Now I had a starting point from which to try out using **kismet**.
 
-//// Laita vielä RAM vertailusta (kali v. bubuntu) ja kuvia sekaan
+For a comparison, using a **Ubuntu server** with **awesome** reduces the **RAM** usage by about 50% when compared to the **Linux Kali**. Both test systems were running idle after logon, with no extra programs running, except **htop**.
+
+![kali_v_ubuntu001](./imgs/kali_v_ubuntu001.png)
+
+Getting the **awesome** window manager installed on the **Raspberry Pi** could be a bit of a challenge. Last time I tried using a **Ubuntu server** on the **Rasp** I couldn't get the network drivers to work. But now we had some goal to work towards to.
 
 ## References
 

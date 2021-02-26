@@ -1,9 +1,10 @@
 #!/bin/bash
 IP=10.200.200.$1;
 
+# check if the argument passed to this script is null, if it is: echo usage
 if [ -z "$IP" ]
 then
-	echo "usage: ./generate.sh <desired-IP-address-end>";
+	echo "usage: sudo bash generate.sh <desired-IP-address-end>";
 else
 	echo "Creating .wireguard directory in /home...";
 	mkdir ~/.wireguard;

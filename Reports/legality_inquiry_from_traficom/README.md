@@ -1,7 +1,7 @@
 # Intro
 This document is the result of the exchange we had with Traficom during our inquiry for Finnish regulations on the legality of our project concerning frequency listening/recording and analysis/decoding. The exchange is originally in finnish, but the relevant parts are translated to English.
 
-Initially we contacted a finnish ISP, DNA if they could help us with our questions or refer us somewhere, with them later forwarding us to a Traficom contact form.
+Initially we contacted a finnish ISP, DNA, if they could help us with our questions or refer us somewhere, with them later forwarding us to a Traficom contact form.
 
 # The exchange in Finnish (Original)
 

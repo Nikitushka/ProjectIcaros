@@ -2,7 +2,7 @@
 IP=10.200.200.$1;
 
 # check if the argument passed to this script is null, if it is: echo usage
-if [ -z "$IP" ]
+if [ -z "$1" ]
 then
 	echo "usage: sudo bash generate.sh <desired-IP-address-end>";
 else

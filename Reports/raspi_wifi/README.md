@@ -20,6 +20,10 @@ Following [another thread on askubuntu](https://askubuntu.com/questions/1254923/
 
 After this, we configured the **Raspberry Pi** for remote use through our **VPN server**. We used a USB-powerbank to power the **Raspberry Pi** as **Nikita** walked around the school premises while we checked if the connection was stable. We were also able to print out names of **WiFi** access-points near the **Raspberry Pi**.
 
+![raspiwifi002](./imgs/raspiwifi002.jpg)
+
+_Raspberry Pi at the designated smoking area of the HH Pasila campus_
+
 ## References
 
 https://askubuntu.com/questions/404881/how-do-i-install-an-asus-usb-ac56-wifi-adapter

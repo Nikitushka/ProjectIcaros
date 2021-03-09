@@ -16,7 +16,16 @@ However following the steps, the installation for some reason wasn't successful 
     sudo make -f Makefile.dkms install
     sudo modprobe rtl8812au
 
-Following [another thread on askubuntu](https://askubuntu.com/questions/1254923/install-uninstall-asus-usb-ac56-on-ubuntu-20-04) we were able to get the adapter working. The commands were quite similiar but the later installation seemed to do the trick.
+Following [another thread on askubuntu](https://askubuntu.com/questions/1254923/install-uninstall-asus-usb-ac56-on-ubuntu-20-04) we were able to get the adapter working. The commands were quite similar but the latter installation seemed to do the trick.
+
+```
+sudo apt update
+sudo apt install build-essential git dkms
+git clone https://github.com/aircrack-ng/rtl8812au.git
+cd rtl8812au
+sudo make dkms_install
+sudo modprobe 88XXau
+```
 
 After this, we configured the **Raspberry Pi** for remote use through our **VPN server**. We used a USB-powerbank to power the **Raspberry Pi** as **Nikita** walked around the school premises while we checked if the connection was stable. We were also able to print out names of **WiFi** access-points near the **Raspberry Pi**.
 

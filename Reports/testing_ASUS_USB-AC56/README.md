@@ -1,5 +1,5 @@
 # Introduction
-In order to capture information on WiFi hotspots, we acquired an ASUS USB-AC56 due to it being [mentioned as working with Kali Linux 2020](https://miloserdov.org/?p=2196) (which I presumed would mean with aircrack-ng too.
+In order to capture information on WiFi hotspots, we acquired an ASUS USB-AC56 due to it being [mentioned as working with Kali Linux 2020](https://miloserdov.org/?p=2196) (which I presumed would mean with aircrack-ng too).
 After our [initial tests](https://github.com/Nikitushka/ProjectIcaros/tree/main/Reports/raspi_wifi) with WiFi - the question was: is ASUS USB-AC56 capable of monitor mode and packet injection?
 
 The short answer is a guaranteed yes, for a longer answer please keep on reading.
@@ -20,14 +20,14 @@ sudo apt-get install linux-image-$(whatever the recent version will be)
 # and rebooted with
 sudo reboot
 ```
-alternatively this can be done with
+alternatively this can be done through apt:
 
 ```
 sudo apt update -y
 sudo apt dist-upgrade -y
 sudo reboot
 ```
-Now when ASUS USB-AC56 is plugged it can be viewed with
+Now, when ASUS USB-AC56 is plugged it can be confirmed through:
 ```
 lsusb
 ```

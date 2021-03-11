@@ -63,7 +63,7 @@ Finally, I ran `sudo airodump-ng wlan0` and got a list of nearby WiFi networks. 
 Project Icaros can wholeheartedly guarantee that ASUS USB-AC56 work with AT LEAST `Linux kali 5.10.0-kali4-amd64 #1 SMP Debian 5.10.19-1kali1 (2021-03-03) x86_64 GNU/Linux` and most probably later versions - and supports both monitor mode and packet injection. 
 
 # References 
-
+[Milo Sedorov - USB Wi-Fi Adapters with monitor mode and wireless injection (100% compatible with Kali Linux) 2020 - https://miloserdov.org/?p=2196](https://miloserdov.org/?p=2196)
 [Our Initial Wifi Report - https://github.com/Nikitushka/ProjectIcaros/tree/main/Reports/raspi_wifi](https://github.com/Nikitushka/ProjectIcaros/tree/main/Reports/raspi_wifi)
 [Hacking Wi-Fi with Kali Linux - https://coady.tech/hacking-wi-fi-with-kali-linux/](https://coady.tech/hacking-wi-fi-with-kali-linux/)
 [How To Install ALFA AWUS1900 Kali Linux 2018.4 - https://online-it.nu/how-to-install-alfa-awus1900-kali-linux-2018-4/](https://online-it.nu/how-to-install-alfa-awus1900-kali-linux-2018-4/)

@@ -14,5 +14,4 @@ The guide can be found [here](https://www.raspberrypi.org/documentation/configur
 After this i want to try and find some signal i could listen to. After launching Gqrx we can instantly see green on our otherwise blue waterfall view. When we focus on parts where there is green, the static changes a little bit, but we still cannot hear anyhting.
 Even though we see green on our waterfall, we cannot hear anything from these waterfalls. I will do more research about RTL-SDR and i will get back to trying after the research.
 
-### Research on RTL-SDR and how it works with Gqrx
 

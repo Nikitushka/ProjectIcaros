@@ -18,3 +18,14 @@ _Model with all the major components in. Materials added for readability._
 
 _Measuring component dimensions._
 
+After some tinkerin I was able to come up with a "rail system" to attach the top and bottom parts of the case. I haven't yet figured out a locking mechanism, so that the case remains closed. Something like an embedded bearing ball would be cool, but implementing it could be challenging.
+
+![3d_case001](./imgs/3d_case001.png)
+
+![3d_case002](./imgs/3d_case002.png)
+
+_The rails shown from front and back_
+
+![3d_case003](./imgs/3d_case003.png)
+
+_Almost completed case, some details still missing_

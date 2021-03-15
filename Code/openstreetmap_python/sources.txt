@@ -1,6 +1,0 @@
-https://terokarvinen.com/2015/openstreetmap-leaflet-js-free-map-without-registerin-or-api-keys/index.html?fromSearch=
-http://terokarvinen.com/2017/hello-python-flask-web-app-development-server-install-on-ubuntu-16-04/index.html?fromSearch=
-https://www.postgresqltutorial.com/postgresql-python/connect/
-https://medium.com/techcrush/how-to-render-html-file-in-flask-3fbfb16b47f6
-https://stackabuse.com/serving-static-files-with-flask/
-https://leafletjs.com/examples/quick-start/

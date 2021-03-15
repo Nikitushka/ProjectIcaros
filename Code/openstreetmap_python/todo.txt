@@ -1,7 +1,0 @@
-* after db is created, work on dbconn.py more
-* create rudimentary flask backend
-* work on frontend
-* implement map
-* get backend to provide data to frontend
-* get backend to receive data from scans and insert it into db
-* fill up the todolist more

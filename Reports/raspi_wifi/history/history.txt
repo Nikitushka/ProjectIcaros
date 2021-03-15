@@ -1,0 +1,133 @@
+  39  sudo apt install -y git dkms
+   40  git clone https://github.com/abperiasamy/rtl18812AU_8821AU_linux.git
+   41  git clone https://github.com/abperiasamy/rtl8812AU_8821AU_linux.git
+   42  ls
+   43  cd rtl8812AU_8821AU_linux/
+   44  ls
+   45  sudo make -f Makefile.dkms install
+   46  sudo modprobe 8812au
+   47  sudo modprobe rtl8812au
+   48  sudo modprobe rt8812au
+   49  man modprobe
+   50  sudo modprobe -v rt8812au
+   51  sudo modprobe -v rtl8812au
+   52  modprobe -help
+   53  clear
+   54  ip a
+   55  ifconfig
+   56  sudo apt install -y net-tools
+   57  ifconfig
+   58  ifconfig wlan1
+   59  ifconfig wlan1 up
+   60  ifconfig wlan0 down
+   61  sudo ifconfig wlan0 down
+   62  ping google.com
+   63  ifconfig
+   64  man modprobe
+   65  which vim
+   66  sudo vim /etc/network/interfaces
+   67  sudo ls /etc/network/interfaces
+   68  sudo ls /etc/network/
+   69  sudo vim /etc/network/if-up.d/
+   70  find / -name interfaces 2>/dev/null
+   71  sudo find / -name interfaces 2>/dev/null
+   72  sudo find / -name 01-netcfg.yml 2>/dev/null
+   73  sudo find / -name netowrk* 2>/dev/null
+   74  ls /mnt
+   75  ls /dev
+   76  ls /dev/usb/
+   77  ls /dev/usb/hiddev0 
+   78  ls /dev/usb/hiddev1
+   79  sudo shutdown -r now
+   80  clear
+   81  startx
+   82  ifconfig
+   83  ls
+   84  cd rtl8812AU_8821AU_linux/
+   85  ls
+   86  file ifcfg-wlan0 
+   87  cat ifcfg-wlan0 
+   88  cat Makefile
+   89  setxkbmap 
+   90  setxkbmap EN
+   91  setxkbmap ENG
+   92  setxkbmap en
+   93  setxkbmap eng
+   94  setxkbmap us
+   95  cat Makefile | grep -e wlan0
+   96  cat Makefile | grep -e "wlan0"
+   97  ls
+   98  cat Makefile | grep -e "*wlan0*"
+   99  cat Makefile | grep -e *wlan0*
+  100  man grep
+  101  cat Makefile | grep -e *wlan0* -c 5
+  102  cat Makefile | grep -e *wlan0* -c 
+  103  cat Makefile | grep -e *wlan0* -C 5
+  104  man dhclient
+  105  sudo ls /etc/sysconfig/network-scripts
+  106  ls 
+  107  sudo ls /etc/sysconfig/
+  108  ifconfig
+  109  ping -c 4 google.com
+  110  vim Makefile
+  111  ls
+  112  cat README.md | sudo apt-get install install linux-image-rpi-rpvf
+  113  cat README.md | grep -e "sudo apt-get install linux-image-rpi-rpvf"
+  114  less README.md 
+  115  sudo apt-get install linux-image-rpi-rpfv linux-headers-rpi-rpfv raspberrypi-kernel-headers dkms build-essential bc
+  116  sudo apt update
+  117  sudo apt update -y
+  118  sudo apt-get install linux-image-rpi-rpfv linux-headers-rpi-rpfv raspberrypi-kernel-headers dkms build-essential bc
+  119  sudo apt install linux-image-rpi-rpfv linux-headers-rpi-rpfv raspberrypi-kernel-headers dkms build-essential bc
+  120  sudo apt install git bc bison flex libssl-dev
+  121  less README.md 
+  122  sudo wget https://raw.githubusercontent.com/notro/rpi-source/master/rpi-source -O /usr/local/bin/rpi-source && sudo chmod +x /usr/local/bin/rpi-source && /usr/local/bin/rpi-source -q --tag-update
+  123  rpi-source
+  124  sudo apt install python python3
+  125  sudo pt vittu toimi /y
+  126  setxkbmap fi
+  127  clear
+  128  ls
+  129  clear
+  130  ls
+  131  cd ..
+  132  ls
+  133  ls -la
+  134  cd rtl8812AU_8821AU_linux/
+  135  clear
+  136  ls
+  137  rpi-source
+  138  sudo apt list raspberrypi
+  139  sudo apt list kernel
+  140  sudo apt list *kernel-headers*
+  141  sudo apt list headers
+  142  uname -r
+  143  rpi-update
+  144  setxkbmap us
+  145  sudo apt install linux-headers-$(uname -r)
+  146  ls
+  147  ifconfig
+  148  make 
+  149  ls
+  150  sudo make -f Makefile.dkms install
+  151  sudo modprobe -a rtl8812au
+  152  ifconfig
+  153  sudo shutdown -r now
+  154  ifconfig
+  155  lsusb
+  156  ip a
+  157  sudo modprobe -a rtl8812au
+  158  man modprobe
+  159  sudo modprobe -av rtl8812au
+  160  sudo modprobe -v rtl8812au
+  161  sudo modprobe -a rtl8812au -v
+  162  ip a
+  163  ifconfig
+  164  lsusb
+  165  ifconfig
+  166  sudo service network-manger restat
+  167  sudo service network-manager restat
+  168  sudo service network-manager restart
+  169  sudo vim /etc/network/interfaces
+  170  shutdown now
+

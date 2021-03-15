@@ -123,11 +123,35 @@ Seuraavie työvaiheita viikolle 6:
 
 Kukin työstää itse tai muiden kanssa ja kirjoittelee muistiinpanoja/raportteja tapahtumista.
 
+## TAPAAMINEN 12.02.2021
+
+Tapaamisessä käytyjä asioita:
+
+* Kävimme läpi Elmon luomat raportit OpenStreetMapista ja Kismetistä.
+* Päivitimme Trelloon uudet kortit uusille osille projektia ja kommentoimme/hyväksyimme olemassa olevien korttien etenemisen.
+* Siirsimme drafts-branchin sisällön mainiin.
+* Otimme yhteyttä DNA asiakaspalveluun ja saimmi sähköpostiosoitteen josta voimme saada lisätietoa mahdollisista laillisista rajoista liittyen signaaleihin ja puhelinmastoihin.
+* Sovimme, että pidämme viikkotapaamisen maanantaina kello 14.
+
 ## TAPAAMINEN 15.2.2021
 
 * Aki on samalla, kun hän on tutkinut SDR:n ja Web SDR:n toimintaa törmännyt keskusteluun siitä, miten voisimme saada signaalien lähtösijainnin selvitettyä. Kävi ilmi, että tuo signaalin paikantaminen on melkein mahdotonta (lähde: https://www.reddit.com/r/RTLSDR/comments/4c18ct/distance/)
 * Kirjasimme ylös lyhyet esittelyt itsestämme ensimmäistä viikkotapaamisen raporttia varten.
 * Päätettiin, että keskiviikon tapaamista varten tutkimme lisää tuosta signaalin paikannettavuudesta ja tutkimme myös vaihtoehtoista projektin pääpiirrettä, joka olisi WiFi kartoitus.
+
+## 22 02 2021
+
+  * WireGuard vaatii palvelimen toimiakseen -> mistä palvelin, mitkä konffit. (DigitalOcean)
+
+  * Kokeilua Raspiin: Ubuntu serverin asennus, siihen graafisen käyttöliittymän asennus ja vaadittavien työkalujen asennus (kismet, airmon-ng, terminaali-emulaattori jne.). Vaatii myös WiFi-ajureiden asennuksen.
+
+  * Katsottu Digital Oceanin pilvipalveluita mahdollisuutena pyörittää palvelimia
+
+  * Sulautetaan viikon 7 ja 8 tunnit yhteen.
+
+## 1.3.2021 
+* Kävimme raportit kaikesta, jota on syntynyt läpi pikaisesti ja mergasimme draftin mainiin.
+* Kävimme läpi miten skripti, jolla yhdistämme vps:n toimii.
 
 ### Komentoja
 
@@ -141,12 +165,4 @@ https://asiointi.maanmittauslaitos.fi/karttapaikka/ (offline)
 openstreetmap (online)
 http://terokarvinen.com/2012/getting-started-with-openlayers-and-openstreetmap/
 
-## TAPAAMINEN 12.02.2021
 
-Tapaamisessä käytyjä asioita:
-
-* Kävimme läpi Elmon luomat raportit OpenStreetMapista ja Kismetistä.
-* Päivitimme Trelloon uudet kortit uusille osille projektia ja kommentoimme/hyväksyimme olemassa olevien korttien etenemisen.
-* Siirsimme drafts-branchin sisällön mainiin.
-* Otimme yhteyttä DNA asiakaspalveluun ja saimmi sähköpostiosoitteen josta voimme saada lisätietoa mahdollisista laillisista rajoista liittyen signaaleihin ja puhelinmastoihin.
-* Sovimme, että pidämme viikkotapaamisen maanantaina kello 14.

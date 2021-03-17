@@ -53,9 +53,10 @@ Then, I ran `sudo airmon-ng check wlan0` to check if any interfering processes n
 And the first confirmation of monitoring mode being supported was when I ran `sudo airmon-ng start wlan0` after killing the potential interfering processes:
 
 ![airmon-ng start](./images/6.jpg)
+
 *Kaching!* It is on!
 
-### Note: if the next step doesn't work, make sure to reboot and replub the usb device.
+### Note: if the next step doesn't work, make sure to reboot and replug the usb device.
 
 Finally, I ran `sudo airodump-ng wlan0` and got a list of nearby WiFi networks. I was able to capture handhsakes from my network when a device connected to it and to send deauth packets in order to force devices to disconnect, confirming that injection works. After capturing the handshake I was able to "crack" it, by using my actual WiFi password as a list and the handshake in a .cap file, like described in the [coady.tech article](https://coady.tech/hacking-wi-fi-with-kali-linux/)
 

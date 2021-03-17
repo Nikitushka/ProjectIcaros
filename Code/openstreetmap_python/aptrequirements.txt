@@ -1,3 +1,4 @@
 jquery
 leaflet
 python3-flask
+python3-flask-sqlaclhemy

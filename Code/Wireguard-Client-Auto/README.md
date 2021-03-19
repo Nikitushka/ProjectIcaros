@@ -27,3 +27,4 @@ sudo wg-quick down wg0-client
 
 ## References
 In order to install wireguard on the server and to write this script I used this guide written by CK: [ckn.io - WireGuard VPN: Typical Setup](https://www.ckn.io/blog/2017/11/14/wireguard-vpn-typical-setup/)
+#### NOTE: THIS GUIDE HAS A PROBLEM WITH THE DNS SETUP, IN ORDER TO FIX IT - [REFER TO THIS REPORT](https://github.com/Nikitushka/ProjectIcaros/tree/main/Reports/dns_problems)

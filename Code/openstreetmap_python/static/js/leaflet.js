@@ -8,6 +8,21 @@
 map = new L.Map('map');
 url = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 opt = {};
+
+//var markers = [L.marker([60.16, 24.9]),
+//L.marker([60.18, 24.99])];
+
+// Check JS map function, check JS array of objects
+
 var layer = new L.TileLayer(url,opt);
+
+// area marker
+// opacity
+
 layer.addTo(map);
+
 map.setView(new L.LatLng(60.1733244, 24.9410248), 9);
+
+marker2 = new L.marker([60.16, 24.9]).addTo(map);
+
+marker = new L.marker([60.17, 24.94]).addTo(map);

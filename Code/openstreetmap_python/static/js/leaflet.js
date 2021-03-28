@@ -9,20 +9,97 @@ map = new L.Map('map');
 url = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 opt = {};
 
-//var markers = [L.marker([60.16, 24.9]),
-//L.marker([60.18, 24.99])];
+let markers = [ // Hardcoded array of coordinate objects
+                // In the future get coordinates from API
+    /*
+    // BLANK OBJ
+    {   
+        "lat": x,
+        "lon": y
+    }
+    */
+    {
+        "lat": 60.16,
+        "lon": 24.9
+    },
+    {
+        "lat": 60.17,
+        "lon": 24.94
+    },
+    {
+        "lat": 60.175,
+        "lon": 24.92
+    },
+    {
+        "lat": 60.158,
+        "lon": 24.91
+    },
+]
 
-// Check JS map function, check JS array of objects
+let circles = [
+    /*
+    // BLANK OBJ
+    {
+        "lat": x,
+        "lon": y,
+        "str": z, // range from -74 to -23 for testing purposes
+
+    },
+    */
+    {
+        "lat": 60.18,
+        "lon": 24.98,
+        "str": -53, // range from -74 to -23 for testing purposes
+
+    },
+    {
+        "lat": 60.185,
+        "lon": 25,
+        "str": -33, // range from -74 to -23 for testing purposes
+
+    },
+    {
+        "lat": 60.182,
+        "lon": 25.02,
+        "str": -23, // range from -74 to -23 for testing purposes
+
+    },
+    {
+        "lat": 60.189,
+        "lon": 25.01,
+        "str": -74, // range from -74 to -23 for testing purposes
+
+    },
+]
 
 var layer = new L.TileLayer(url,opt);
-
-// area marker
-// opacity
 
 layer.addTo(map);
 
 map.setView(new L.LatLng(60.1733244, 24.9410248), 9);
 
-marker2 = new L.marker([60.16, 24.9]).addTo(map);
+function strToRgb(r, g, b) {
+    // green's value gets decreased
+    // by the signal strength amount times two.
+    // The signal strength is a negative value so
+    // green + (-str*2) equals green - (str*2)
+    var green = 255 + ((g+23) * 5);
+    // Stronger signal = more green, less red,
+    // weaker signal = more red, less green.
+    var red = 0 - ((g+23) * 5);
+    return "rgb(" + red + "," + green +"," + b + ")";
+}
 
-marker = new L.marker([60.17, 24.94]).addTo(map);
+let mapmarkers = markers.map(marker => {
+    // Place a marker on the map for every pair of
+    // coordinates
+    markertest = new L.marker([marker.lat, marker.lon]).addTo(map);
+});
+
+let mapcircles = circles.map(circle => {
+    circletest = new L.circle([circle.lat, circle.lon], {
+        color: strToRgb(255, circle.str, 0),
+        fillOpacity: 0.3,
+        radius: 500
+    }).addTo(map);
+});

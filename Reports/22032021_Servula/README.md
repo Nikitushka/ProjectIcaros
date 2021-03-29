@@ -22,3 +22,16 @@ The script will first save the output into a file called "wifi_output.txt". Then
 ### SDR clear data and partial automation
 
 We also need to have clear data from our SDR dongle which would include signal frequency and signal strength. With current signal strength and frequency we can deduce how well the signal is received in the current location and the current time. For this action we also tried to automate it so it would be easy to see the signal strength at the current location every time we would move. We also wanted to have same effect as our WiFi script, so we also would save the output into a single file. Everytime the script would do a scan it will save the output into a single file after the previosly written data. Here is our script.
+
+```
+
+#!/bin/bash
+while true;
+        do
+        printf "\n\n=+=+=+=+=+=+=+=+= $(date) =+=+=+=+=+=+=+=+=\n" >> SDR_output.txt;
+        printf "\n=-=-=-= SDR =-=-=-=\n\n" >> SDR_output.txt;
+        { echo "f"; sleep 1; echo "l"; sleep 1; } | telnet localhost 7356 >> SDR_output.txt;
+        printf "\n=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=" >> SDR_output.txt
+        sleep 300;
+        done
+```

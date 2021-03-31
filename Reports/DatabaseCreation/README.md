@@ -1,3 +1,4 @@
+### Creating database prototype
 We started the creation of our SDR mapping application by planning the parts we need.
 The toughest part was to plan our database and to find the information we needed to store.
 The database was planned to be iplemented with postgresql.

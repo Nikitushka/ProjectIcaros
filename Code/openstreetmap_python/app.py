@@ -3,8 +3,9 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy as sqlA
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URL'] = 'postgresql://wouldn\'t you like to know'
+app.config['SQLALCHEMY_DATABASE_URL'] = 'postgresql://postgres:test@localhost/icaros'
 db = sqlA(app)
+db.create_all()
 
 # map
 @app.route("/")
@@ -17,20 +18,13 @@ def api():
     # models will go here
     # radio = RadioModel.query.all()
     # wifi = WiFiModel.query.all()
-    # radioresults = [
-        # {
-        #
-        #
-        #
-        # } for r in radio]
-    # wifiresults = [
-        # {
-        #
-        #
-        #
-        # } for w in wifi]
 
-    # return {"total": (len(radio) + len(wifi)), "radio": radioresults, "wifi": wifiresults}
+    # trying out a pure sql solution
+
+    # radioresults = db.engine.execute("SELECT * FROM sdr")
+    wifiresults = db.engine.execute("SELECT * FROM wifi")
+
+    return {"total": (len(radioresults) + len(wifiresults)), "radio": radioresults, "wifi": wifiresults}
     
     return "Hey i'm worken 'ere!"
 

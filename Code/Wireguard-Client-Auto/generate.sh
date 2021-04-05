@@ -17,7 +17,7 @@ else
 	PUBKEY=$(cat client_public_key);
 	PRIVATEKEY=$(cat client_private_key);
 	# VPN Server IP hidden for security reasons, changed to localhost instead
-	ssh -t sysadm@localhost "sudo -S wg set wg0 peer $PUBKEY allowed-ips $IP/32";
+	ssh -t sysadm@142.93.239.138 "sudo -S wg set wg0 peer $PUBKEY allowed-ips $IP/32";
 	
 	echo "Generating wg0-client.conf in /etc/wireguard ...";
 	# Change endpoint IP from localhost to VPN Server IP 
@@ -29,7 +29,7 @@ else
 
 	[Peer]
 	PublicKey = X7kCaXkoE+O4wgjBHR2NXXIqh9z8w93ZlZSxwdbAFDg=
-	Endpoint = localhost:51820
+	Endpoint = 142.93.239.138:51820
 	AllowedIPs = 0.0.0.0/0
 	PersistentKeepalive = 21
 	EOF

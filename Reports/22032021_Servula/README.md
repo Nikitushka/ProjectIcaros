@@ -1,4 +1,4 @@
-# Meeting on 22.3.2021 in Servula
+# Meetings in Servula | Automation of SDR + WiFi output
 
 On monday we had a plan to figure out the output from WiFi and SDR. We need clear output so we can easily store and view data both from our WiFi  adapter and our SDR dongle. in order for us to save our data to database we need clear output from Gqrx and nmcli.
 
@@ -35,3 +35,11 @@ while true;
         sleep 300;
         done
 ```
+
+### New method for automation of SDR
+
+The script we created to get clear data from SDR receiving signal was great for listening to a single frequency and outputting the strength of the signal. However the problem of this solution is that for our project we need to observe wider band of frequencies, which is impossible with only using Gqrx and it's CLI connection. Other problem with this solution is that Gqrx needs to be running in GUI mode for us to be able to use CLI over our wireguard setup. We are running SDR on Raspberry Pi's so it doesn't have large capabilities for power. If we wanted to run both SDR dongle and our WiFi adapter on a single device we need a solution for SDR that doesn't need a heavy GUI. For this problem we found a solution from RTL's own software. We found out that using rtl_power we can easily listen to certain bandwidth and then save the information into CSV file. We followed simple documentation from [KmKeen](http://kmkeen.com/rtl-power/).
+
+Basically we can define a range of frequencies we wish to observe and we can define how often it scans the whole range and how large jumps it does between scans. For example we can define the program to scan everyhting from 80MHz to 110MHz which should include most FM radios in Helsinki. Then we can define it to do scans between every 125kHz. With this we can define it to place output into a single CSV file that we can simply read and input the important data into our database.  
+
+Our next mission is to keep working on the database and the communication between our front and the db. After that we will have to figure out how we can input the data from the CSV file into the database. When all that works we will have to find out how we can use mobile phone to pinpoint our location and keep track of the location and time we were at the location of the scan. 

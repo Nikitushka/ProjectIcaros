@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy as sqlA
+import json
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URL'] = 'postgresql://postgres:test@localhost/icaros'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:test@localhost/icaros'
 db = sqlA(app)
 db.create_all()
 
@@ -15,47 +16,41 @@ def map():
 # return EVERYTHING
 @app.route("/api")
 def api():
-    # models will go here
-    # radio = RadioModel.query.all()
-    # wifi = WiFiModel.query.all()
-
+ 
     # trying out a pure sql solution
 
-    # radioresults = db.engine.execute("SELECT * FROM sdr")
-    wifiresults = db.engine.execute("SELECT * FROM wifi")
+    radioresults = db.engine.execute("SELECT * FROM sdr").fetchall()
+    wifiresults = db.engine.execute("SELECT * FROM wifi").fetchall()
 
-    return {"total": (len(radioresults) + len(wifiresults)), "radio": radioresults, "wifi": wifiresults}
+    return {"total": (len(radioresults) + len(wifiresults)), "sdr": [dict(row) for row in radioresults], "wifi": [dict(row) for row in wifiresults]}
     
-    return "Hey i'm worken 'ere!"
-
-# return wifi data only
-@app.route("/api/wifi")
+# return wifi data only or post wifi data
+@app.route("/api/wifi", methods = ['GET', 'POST'])
 def wifi():
-    # wifi = WifiModel.query.all()
-    # wifiresults = [
-        # {
-        #
-        #
-        #
-        # } for w in wifi]
-    # return {"total": len(wifi), "wifi": wifiresults}
+    if request.method == 'POST':
+        
+        data = request.get_json()
+        return data["number"]
+        
+    else:
+        
+        wifiresults = db.engine.execute("SELECT * FROM wifi").fetchall()
+        return {"total": len(wifiresults), "wifi": [dict(row) for row in wifiresults]}
 
-    return "Hey i'm worken 'ere!"
-
-# return radio data only
-@app.route("/api/radio")
+# return sdr data only or post sdr data
+@app.route("/api/sdr", methods = ['GET', 'POST'])
 def radio():
-    # radio = RadioModel.query.all()
-    # radioresults = [
-        # {
-        #
-        #
-        #
-        # } for r in radio]
+    if request.method == 'POST':
+        
+        data = request.get_json()
 
-    # return {"total": len(radio), "radio": radioresults}
-    
-    return "Hey i'm worken 'ere!"
+    else:
+        
+        radioresults = db.engine.execute("SELECT * FROM sdr").fetchall()
+        return {"total": len(radioresults), "sdr": [dict(row) for row in radioresults]}
+
+def insert_wifi(frequency, lat, lon, modulation, strength):
+    print("placeholder")
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -103,3 +103,36 @@ let mapcircles = circles.map(circle => {
         radius: 500
     }).addTo(map);
 });
+/*
+function Get(url){
+	var Httpreq = new XMLHttpRequest();
+	Httpreq.open("GET", url, false);
+	Httpreq.send(null);
+	return Httpreq.responseText;
+}
+
+var json_obj = JSON.parse(Get('http://10.200.200.11:5000/api'));
+console.log(json_obj.sdr[0].frequency);
+*/
+  
+
+// Fetch all scan data from api
+fetch('http://10.200.200.11:5000/api')
+	.then((response) => response.json())
+	.then(function(data){
+		// Only parse SDR results for now
+		let scans = data.sdr;
+		return scans.map(function(scan){
+			// Later call a function here with the lat & lon
+			// as the function parameters for drawing
+			// markers on the map.
+			console.log(scan.frequency);
+		})
+	})
+		
+		/* Did it wrong here, save for now for a remainder
+		let scan_results = data.results;
+		return scan_results.map(function(sdr){
+			console.log(frequency);	
+		})
+		*/

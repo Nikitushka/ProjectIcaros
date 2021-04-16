@@ -5,6 +5,7 @@ import json
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:test@localhost/icaros'
+app.config.from_pyfile('config.py')
 db = sqlA(app)
 db.create_all()
 

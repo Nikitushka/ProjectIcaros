@@ -9,69 +9,6 @@ map = new L.Map('map');
 url = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 opt = {};
 
-let markers = [ // Hardcoded array of coordinate objects
-                // In the future get coordinates from API
-    /*
-    // BLANK OBJ
-    {   
-        "lat": x,
-        "lon": y
-    }
-    */
-    {
-        "lat": 60.16,
-        "lon": 24.9
-    },
-    {
-        "lat": 60.17,
-        "lon": 24.94
-    },
-    {
-        "lat": 60.175,
-        "lon": 24.92
-    },
-    {
-        "lat": 60.158,
-        "lon": 24.91
-    },
-]
-
-let circles = [
-    /*
-    // BLANK OBJ
-    {
-        "lat": x,
-        "lon": y,
-        "str": z, // range from -74 to -23 for testing purposes
-
-    },
-    */
-    {
-        "lat": 60.18,
-        "lon": 24.98,
-        "str": -53, // range from -74 to -23 for testing purposes
-
-    },
-    {
-        "lat": 60.185,
-        "lon": 25,
-        "str": -33, // range from -74 to -23 for testing purposes
-
-    },
-    {
-        "lat": 60.182,
-        "lon": 25.02,
-        "str": -23, // range from -74 to -23 for testing purposes
-
-    },
-    {
-        "lat": 60.189,
-        "lon": 25.01,
-        "str": -74, // range from -74 to -23 for testing purposes
-
-    },
-]
-
 var layer = new L.TileLayer(url,opt);
 
 layer.addTo(map);
@@ -90,49 +27,38 @@ function strToRgb(r, g, b) {
     return "rgb(" + red + "," + green +"," + b + ")";
 }
 
-let mapmarkers = markers.map(marker => {
-    // Place a marker on the map for every pair of
-    // coordinates
-    markertest = new L.marker([marker.lat, marker.lon]).addTo(map);
-});
+// Change fetch calls (later) to get specific data
+// instead of all the data, and then parsing through it
 
-let mapcircles = circles.map(circle => {
-    circletest = new L.circle([circle.lat, circle.lon], {
-        color: strToRgb(255, circle.str, 0),
-        fillOpacity: 0.3,
-        radius: 500
-    }).addTo(map);
-});
-/*
-function Get(url){
-	var Httpreq = new XMLHttpRequest();
-	Httpreq.open("GET", url, false);
-	Httpreq.send(null);
-	return Httpreq.responseText;
+// Fetch sdr data from api
+function fetchSdr(){
+	fetch('http://10.200.200.11:5000/api')
+		.then((response) => response.json())
+		.then(function(data){
+		// Only parse SDR results for now
+			let scans = data.sdr;
+			return scans.map(function(scan){
+				console.log("Lat: " + scan.lat + ", Lon: " + scan.lon);
+				// Place circles per lat&lon values
+				circle = new L.circle([scan.lat, scan.lon],{
+					color: strToRgb(255, scan.strength, 0),
+					fillOpacity: 0.3,
+					radius: 500
+				}).addTo(map);
+			})
+		})
 }
 
-var json_obj = JSON.parse(Get('http://10.200.200.11:5000/api'));
-console.log(json_obj.sdr[0].frequency);
-*/
-  
-
-// Fetch all scan data from api
-fetch('http://10.200.200.11:5000/api')
-	.then((response) => response.json())
-	.then(function(data){
-		// Only parse SDR results for now
-		let scans = data.sdr;
-		return scans.map(function(scan){
-			// Later call a function here with the lat & lon
-			// as the function parameters for drawing
-			// markers on the map.
-			console.log(scan.frequency);
+// Fetch wifi data from api
+function fetchWifi(){
+	fetch('http://10.200.200.11:5000/api')
+		.then((response) => response.json())
+		.then(function(data){
+			// Take wifi results -> do something with them
+			let scans = data.wifi;
+			return scans.map(function(scan){
+				console.log("Lat: " + scan.lat + ", Lon: " + scan.lon);
+				marker = new L.marker([scan.lat, scan.lon]).addTo(map);
+			})
 		})
-	})
-		
-		/* Did it wrong here, save for now for a remainder
-		let scan_results = data.results;
-		return scan_results.map(function(sdr){
-			console.log(frequency);	
-		})
-		*/
+}

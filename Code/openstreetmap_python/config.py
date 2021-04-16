@@ -1,0 +1,2 @@
+# Flask configuration
+ENV = 'development'

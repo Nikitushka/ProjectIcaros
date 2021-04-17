@@ -6,6 +6,12 @@ When the device has scanned either SDR frequencies or WiFi signals, and placed i
 
 ![fetch001](./Reports/1704_2021_markersfromapi/imgs/fetch001.png)
 
+_Fetching the data_
+
+![buttons002](./Reports/1704_2021_markersfromapi/imgs/buttons002.png)
+
+_Data from the API displayed as area markers_
+
 This is the github page of Project Icaros.
 This project will be updated as it goes on.<br>
 Project was started 20.1.2021 and will end in 14.5.2021.

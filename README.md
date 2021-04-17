@@ -12,6 +12,8 @@ _Fetching the data_
 
 _Data from the API displayed as area markers_
 
+# About
+
 This is the github page of Project Icaros.
 This project will be updated as it goes on.<br>
 Project was started 20.1.2021 and will end in 14.5.2021.

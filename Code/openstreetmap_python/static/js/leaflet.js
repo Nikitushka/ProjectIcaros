@@ -32,7 +32,7 @@ function strToRgb(r, g, b) {
 
 // Fetch sdr data from api
 function fetchSdr(){
-	fetch('http://xxx.xxx.xxx.xxx:5000/api')
+	fetch('http://10.200.200.11:5000/api')
 		.then((response) => response.json())
 		.then(function(data){
 		// Only parse SDR results for now
@@ -51,7 +51,7 @@ function fetchSdr(){
 
 // Fetch wifi data from api
 function fetchWifi(){
-	fetch('http://xxx.xxx.xxx.xxx:5000/api')
+	fetch('http://10.200.200.11:5000/api')
 		.then((response) => response.json())
 		.then(function(data){
 			// Take wifi results -> do something with them
@@ -62,3 +62,17 @@ function fetchWifi(){
 			})
 		})
 }
+
+var closeBtn = document.getElementById("closeButton");
+var modal = $("testModal");
+
+function scan(){
+	console.log("Scan");
+	modal.style.display = "block";
+	
+}
+
+function modalClose(){
+	modal.style.display = "none";
+}
+

@@ -57,7 +57,7 @@ function fetchWifi(){
 			// Take wifi results -> do something with them
 			let scans = data.wifi;
 			return scans.map(function(scan){
-				console.log("Lat: " + scan.lat + ", Lon: " + scan.lon);
+				console.log("Lat: " + scan.lat + ", Lon: " + scan.lon + ", SSID: " + scan.ssid);
 				marker = new L.marker([scan.lat, scan.lon]).addTo(map);
 			})
 		})

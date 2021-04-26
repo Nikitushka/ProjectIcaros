@@ -1,0 +1,40 @@
+
+=+=+=+=+=+=+=+=+= Mon Mar 29 12:59:06 UTC 2021 =+=+=+=+=+=+=+=+=
+
+ :18\:33\:9D\:0D\:0C\:22:eduroam:Infra:1:130 Mbit/s:100:▂▄▆█:WPA1 WPA2 802.1X
+ :18\:33\:9D\:0D\:0C\:20:HHwlan:Infra:1:130 Mbit/s:100:▂▄▆█:WPA2 802.1X
+ :18\:33\:9D\:0D\:0C\:21:HaagaHeliaPublic:Infra:1:130 Mbit/s:100:▂▄▆█:
+ :18\:33\:9D\:0D\:0C\:23::Infra:1:130 Mbit/s:100:▂▄▆█:WPA2
+ :18\:33\:9D\:0D\:0C\:2F:HHwlan:Infra:40:130 Mbit/s:100:▂▄▆█:WPA2 802.1X
+ :18\:33\:9D\:0D\:0C\:2D:eduroam:Infra:40:130 Mbit/s:100:▂▄▆█:WPA1 WPA2 802.1X
+ :18\:33\:9D\:0D\:0C\:2C::Infra:40:130 Mbit/s:100:▂▄▆█:WPA2
+ :18\:33\:9D\:0D\:0C\:2E:HaagaHeliaPublic:Infra:40:130 Mbit/s:100:▂▄▆█:
+ :DA\:55\:75\:37\:7D\:DE:elmonet:Infra:6:65 Mbit/s:80:▂▄▆_:WPA2
+ :F4\:7F\:35\:CD\:C5\:72:eduroam:Infra:11:130 Mbit/s:70:▂▄▆_:WPA1 WPA2 802.1X
+ :F4\:7F\:35\:CD\:C5\:70:HHwlan:Infra:11:130 Mbit/s:70:▂▄▆_:WPA2 802.1X
+ :F4\:7F\:35\:CD\:C5\:71:HaagaHeliaPublic:Infra:11:130 Mbit/s:69:▂▄▆_:
+ :18\:33\:9D\:0D\:0B\:9D:eduroam:Infra:36:130 Mbit/s:49:▂▄__:WPA1 WPA2 802.1X
+ :18\:33\:9D\:0D\:0B\:9E:HaagaHeliaPublic:Infra:36:130 Mbit/s:49:▂▄__:
+ :18\:33\:9D\:0D\:0B\:9F:HHwlan:Infra:36:130 Mbit/s:47:▂▄__:WPA2 802.1X
+ :18\:33\:9D\:0D\:0B\:9C::Infra:36:130 Mbit/s:45:▂▄__:WPA2
+ :18\:33\:9D\:0D\:0B\:90:HHwlan:Infra:11:130 Mbit/s:44:▂▄__:WPA2 802.1X
+ :F4\:7F\:35\:CD\:C5\:7C::Infra:48:130 Mbit/s:44:▂▄__:WPA2
+ :F4\:7F\:35\:CD\:C5\:7F:HHwlan:Infra:48:130 Mbit/s:44:▂▄__:WPA2 802.1X
+ :F4\:7F\:35\:CD\:C5\:7D:eduroam:Infra:48:130 Mbit/s:42:▂▄__:WPA1 WPA2 802.1X
+ :F4\:7F\:35\:CD\:C5\:7E:HaagaHeliaPublic:Infra:48:130 Mbit/s:42:▂▄__:
+ :18\:33\:9D\:0D\:0B\:91:HaagaHeliaPublic:Infra:11:130 Mbit/s:40:▂▄__:
+ :0C\:2C\:54\:8F\:86\:02:HH5018_2G:Infra:5:130 Mbit/s:37:▂▄__:WPA2
+ :00\:1F\:CA\:CE\:28\:D0:Tielab:Infra:6:54 Mbit/s:37:▂▄__:WPA1 WPA2
+ :BC\:0F\:9A\:28\:7E\:F9:Mojo-Dojo-Mesh:Infra:13:270 Mbit/s:37:▂▄__:WPA1 WPA2
+ :18\:33\:9D\:0D\:0B\:92:eduroam:Infra:11:130 Mbit/s:34:▂▄__:WPA1 WPA2 802.1X
+ :BE\:0F\:9A\:28\:7E\:F9::Infra:13:130 Mbit/s:34:▂▄__:WPA2
+ :00\:1F\:CA\:CE\:28\:DF:Tielab:Infra:36:54 Mbit/s:34:▂▄__:WPA1 WPA2
+ :F4\:7F\:35\:F7\:CD\:70:HHwlan:Infra:1:130 Mbit/s:30:▂___:WPA2 802.1X
+ :F4\:7F\:35\:F7\:CD\:72:eduroam:Infra:1:130 Mbit/s:29:▂___:WPA1 WPA2 802.1X
+ :A0\:93\:51\:95\:4F\:61:HaagaHeliaPublic:Infra:11:130 Mbit/s:29:▂___:
+ :B6\:15\:44\:60\:63\:C6::Infra:11:260 Mbit/s:27:▂___:WPA2 802.1X
+ :F4\:7F\:35\:F7\:CD\:73::Infra:1:130 Mbit/s:25:▂___:WPA2
+ :A0\:93\:51\:95\:4F\:63::Infra:11:130 Mbit/s:25:▂___:WPA2
+ :A0\:93\:51\:95\:4F\:60:HHwlan:Infra:11:130 Mbit/s:22:▂___:WPA2 802.1X
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=

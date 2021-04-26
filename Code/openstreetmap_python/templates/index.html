@@ -6,14 +6,92 @@
 
   <title>Icaros</title>
   <link rel="stylesheet" type="text/css" href="static/css/leaflet.css">
-
+  <style>
+	.modal {
+		display: none;
+		position: absolute;
+		z-index: 1000;
+		padding-top: 150px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.3);
+	}
+	.modal-content {
+		background-color: white;
+		padding: 20px;
+	}
+  </style>
 </head>
 
 <body>
-  <h2>Hey look, a map!</h2>
+  <div id="header">
+    <h2>Scan map</h2>
+    <button onClick="fetchSdr()">Show SDR</button>
+	<button onClick="fetchWifi()">Show WiFi</button>
+	<button id="modalOpenBtn">Scan</button>
+	<button id="testBtn">TEST</button>
+  </div>	
+	<div id="testModal" class="modal">
+		<div class="modal-content">
+			<p>Scan</p>
+			<form id="scanForm">
+				Lat: <input id="latInput" type="text" name="latitude"><br>
+				Lon: <input id="lonInput" type="text" name="longitude"><br>
+				<input id="SDRbtn" type="button" onClick=sdrPost() value="Begin SDR scan">
+				<input id="WIFIbtn" type="button" onClick=wifiPost() value="Begin WiFi scan">
+			</form>
+			<button id="closeButton">Close</button>
+		</div>
+	</div>
   <div id="map"></div>
 
+
+	<script>
+	var modal = document.getElementById('testModal');
+	var btn = document.getElementById('modalOpenBtn');
+	var closeBtn = document.getElementById('closeButton');
+
+	var sdrScanBtn = document.getElementById("SDRbtn");
+	var wifiScanBtn = document.getElementById("WIFIbtn");
+
+	btn.onclick = function(){
+		modal.style.display = "block";
+	}
+	closeBtn.onclick = function(){
+		modal.style.display = "none";
+	}
+	
+	function sdrPost(){
+		console.log("Send POST with coords to scan SDR");
+		var lat = document.getElementById("latInput").value;
+		var lon = document.getElementById("lonInput").value;
+		console.log(lat);
+		console.log(lon);
+		var cords = {"lat": lat, "lon": lon}
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "/api/sdr", true);
+		xhr.setRequestHeader('Content-Type', 'application/json');
+		xhr.send(JSON.stringify(cords));
+	}
+	function wifiPost(){
+		console.log("Send POST with coords to scan SDR");
+		var lat = document.getElementById("latInput").value;
+		var lon = document.getElementById("lonInput").value;
+		console.log(lat);
+		console.log(lon);
+		var cords = {"lat": lat, "lon": lon}
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "/api/wifi", true);
+		xhr.setRequestHeader('Content-Type', 'application/json');
+		xhr.send(JSON.stringify(cords));
+	}
+	</script>
+
   <script src="static/js/leaflet.js"></script>
+  <script type="text/javascript" src="static/js/fetchcall.js"></script>
   <script src="static/js/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

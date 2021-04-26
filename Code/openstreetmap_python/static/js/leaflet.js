@@ -8,6 +8,71 @@
 map = new L.Map('map');
 url = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 opt = {};
+
 var layer = new L.TileLayer(url,opt);
+
 layer.addTo(map);
+
 map.setView(new L.LatLng(60.1733244, 24.9410248), 9);
+
+function strToRgb(r, g, b) {
+    // green's value gets decreased
+    // by the signal strength amount times two.
+    // The signal strength is a negative value so
+    // green + (-str*2) equals green - (str*2)
+    var green = 255 + ((g+23) * 5);
+    // Stronger signal = more green, less red,
+    // weaker signal = more red, less green.
+    var red = 0 - ((g+23) * 5);
+    return "rgb(" + red + "," + green +"," + b + ")";
+}
+
+// Change fetch calls (later) to get specific data
+// instead of all the data, and then parsing through it
+
+// Fetch sdr data from api
+function fetchSdr(){
+	fetch('http://10.200.200.11:5000/api')
+		.then((response) => response.json())
+		.then(function(data){
+		// Only parse SDR results for now
+			let scans = data.sdr;
+			return scans.map(function(scan){
+				console.log("Lat: " + scan.lat + ", Lon: " + scan.lon);
+				// Place circles per lat&lon values
+				circle = new L.circle([scan.lat, scan.lon],{
+					color: strToRgb(255, scan.strength, 0),
+					fillOpacity: 0.3,
+					radius: 500
+				}).addTo(map);
+			})
+		})
+}
+
+// Fetch wifi data from api
+function fetchWifi(){
+	fetch('http://10.200.200.11:5000/api')
+		.then((response) => response.json())
+		.then(function(data){
+			// Take wifi results -> do something with them
+			let scans = data.wifi;
+			return scans.map(function(scan){
+				console.log("Lat: " + scan.lat + ", Lon: " + scan.lon + ", SSID: " + scan.ssid);
+				marker = new L.marker([scan.lat, scan.lon]).addTo(map);
+			})
+		})
+}
+
+var closeBtn = document.getElementById("closeButton");
+var modal = $("testModal");
+
+function scan(){
+	console.log("Scan");
+	modal.style.display = "block";
+	
+}
+
+function modalClose(){
+	modal.style.display = "none";
+}
+

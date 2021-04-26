@@ -12,6 +12,8 @@ Since we had no means to insert the included driver CD which came with the adapt
 
 However following the steps, the installation for some reason wasn't successful and we weren't able to connect to a **WiFi** network.
 
+    // These commands were unsuccessful in installing the drivers.
+    // For archival purposes only
     git clone https://github.com/abperiasamy/rtl8812AU_8821AU_linux.git
     sudo make -f Makefile.dkms install
     sudo modprobe rtl8812au

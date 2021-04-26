@@ -1,5 +1,13 @@
 #map {
+	min-height: 500px;
 	height: 500px;
+}
+
+#header {
+	display: flex;
+	flex-direction: row;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 
 /* required styles */

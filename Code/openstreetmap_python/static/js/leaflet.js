@@ -9,6 +9,13 @@ map = new L.Map('map');
 url = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 opt = {};
 
+var wifiIcon = L.icon({
+	iconUrl: 'static/css/images/wifi-marker-icon-small.png',
+
+	iconSize: [25, 41],
+	iconAnchor: [12, 40],
+	popupAnchor: [0, -40]
+});
 var layer = new L.TileLayer(url,opt);
 
 layer.addTo(map);
@@ -49,18 +56,28 @@ function fetchSdr(){
 		})
 }
 
-// Fetch wifi data from api
+// Fetch wifi data from api and place markers accordingly
 function fetchWifi(){
+
+	var markersCluster = L.markerClusterGroup();
 	fetch('http://10.200.200.11:5000/api')
 		.then((response) => response.json())
 		.then(function(data){
-			// Take wifi results -> do something with them
 			let scans = data.wifi;
 			return scans.map(function(scan){
 				console.log("Lat: " + scan.lat + ", Lon: " + scan.lon + ", SSID: " + scan.ssid);
-				marker = new L.marker([scan.lat, scan.lon]).addTo(map);
+				var title = scan.ssid;
+				var id = scan.scan_id;
+				if (title === ""){
+					title = "No SSID found";
+				}
+				var popupContent = "<p>SSID: " + title + "</p><p>Scan ID: " + id + "</p>";
+				var marker = new L.marker([scan.lat, scan.lon], {icon: wifiIcon} );
+				marker.bindPopup(popupContent);
+				markersCluster.addLayer(marker);
 			})
 		})
+	map.addLayer(markersCluster);
 }
 
 var closeBtn = document.getElementById("closeButton");

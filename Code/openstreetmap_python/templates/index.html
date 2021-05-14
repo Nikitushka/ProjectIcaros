@@ -23,6 +23,8 @@
 		padding: 20px;
 	}
   </style>
+	<link rel="stylesheet" href="../static/css/MarkerCluster.css"/>
+	<link rel="stylesheet" href="../static/css/MarkerCluster.Default.css"/>
 </head>
 
 <body>
@@ -31,7 +33,6 @@
     <button onClick="fetchSdr()">Show SDR</button>
 	<button onClick="fetchWifi()">Show WiFi</button>
 	<button id="modalOpenBtn">Scan</button>
-	<button id="testBtn">TEST</button>
   </div>	
 	<div id="testModal" class="modal">
 		<div class="modal-content">
@@ -93,5 +94,6 @@
   <script type="text/javascript" src="static/js/fetchcall.js"></script>
   <script src="static/js/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../static/js/leaflet.markercluster-src.js"></script>
 </body>
 </html>

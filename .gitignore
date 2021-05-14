@@ -1,6 +1,7 @@
 # stuff nobody really cares about
 /Code/openstreetmap_python/sources.txt
 /Code/openstreetmap_python/todo.txt
+/Code/openstreetmap_python/output/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
